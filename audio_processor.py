@@ -64,7 +64,9 @@ class AudioProcessor:
                 return False
             
             # 确保输出目录存在
-            os.makedirs(os.path.dirname(output_path), exist_ok=True)
+            output_dir = os.path.dirname(output_path)
+            if output_dir and not os.path.exists(output_dir):
+                os.makedirs(output_dir, exist_ok=True)
             
             # 如果是单声道，去掉多余的维度
             if self.channels == 1:

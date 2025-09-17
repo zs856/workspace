@@ -204,7 +204,9 @@ def visualize_audio():
 
 if __name__ == '__main__':
     # 确保模板目录存在
-    os.makedirs('/workspace/templates', exist_ok=True)
+    template_dir = 'templates'
+    if not os.path.exists(template_dir):
+        os.makedirs(template_dir, exist_ok=True)
     
     # 创建HTML模板
     html_template = """
