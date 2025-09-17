@@ -1,0 +1,14 @@
+Web音频处理应用启动中...
+访问地址: http://localhost:56274
+ * Serving Flask app 'web_audio_app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:56274
+ * Running on http://192.168.215.4:56274
+Press CTRL+C to quit
+ * Restarting with stat
+Web音频处理应用启动中...
+访问地址: http://localhost:56274
+ * Debugger is active!
+ * Debugger PIN: 402-538-040
