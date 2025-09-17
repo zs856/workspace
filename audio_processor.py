@@ -455,7 +455,7 @@ def main():
     audio_data += noise
     
     # 保存示例音频
-    example_file = "/workspace/example_audio.wav"
+    example_file = "example_audio.wav"
     sf.write(example_file, audio_data, sample_rate)
     print(f"示例音频文件已创建: {example_file}")
     
@@ -468,15 +468,15 @@ def main():
         
         # 绘制波形图
         print("\n4. 绘制波形图...")
-        processor.plot_waveform("/workspace/waveform.png")
+        processor.plot_waveform("waveform.png")
         
         # 绘制频谱图
         print("\n5. 绘制频谱图...")
-        processor.plot_spectrum("/workspace/spectrum.png")
+        processor.plot_spectrum("spectrum.png")
         
         # 绘制语谱图
         print("\n6. 绘制语谱图...")
-        processor.plot_spectrogram("/workspace/spectrogram.png")
+        processor.plot_spectrogram("spectrogram.png")
         
         # 提取音频特征
         print("\n7. 提取音频特征...")
@@ -496,7 +496,7 @@ def main():
         
         # 保存处理后的音频
         print("\n11. 保存处理后的音频...")
-        processor.save_audio("/workspace/processed_audio.wav")
+        processor.save_audio("processed_audio.wav")
         
         print("\n=== 处理完成 ===")
         print("生成的文件:")

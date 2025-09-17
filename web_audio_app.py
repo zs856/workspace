@@ -39,7 +39,7 @@ def upload_file():
         
         # 保存上传的文件
         filename = file.filename
-        file_path = os.path.join('/workspace', filename)
+        file_path = os.path.join('.', filename)
         file.save(file_path)
         
         # 加载音频文件
@@ -132,7 +132,7 @@ def save_audio():
     """保存音频文件"""
     try:
         filename = request.json.get('filename', 'processed_audio.wav')
-        output_path = os.path.join('/workspace', filename)
+        output_path = os.path.join('.', filename)
         
         if processor.save_audio(output_path):
             return jsonify({
@@ -151,7 +151,7 @@ def save_audio():
 def download_file(filename):
     """下载处理后的音频文件"""
     try:
-        file_path = os.path.join('/workspace', filename)
+        file_path = os.path.join('.', filename)
         if os.path.exists(file_path):
             return send_file(file_path, as_attachment=True)
         else:
@@ -668,7 +668,7 @@ if __name__ == '__main__':
     """
     
     # 写入HTML模板文件
-    with open('/workspace/templates/index.html', 'w', encoding='utf-8') as f:
+    with open(os.path.join(template_dir, 'index.html'), 'w', encoding='utf-8') as f:
         f.write(html_template)
     
     print("Web音频处理应用启动中...")
